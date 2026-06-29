@@ -66,4 +66,10 @@ h1{
     border-radius: 8px;
 
     cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.addbtn:hover{
+    background-color: #45a049;
 }
