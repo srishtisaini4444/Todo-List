@@ -8,6 +8,6 @@ const taskList = document.getElementById("taskList");
 
 addBtn.addEventListener("click", function(){
 
-    console.log("Button Clicked!");
+    console.log(taskInput.value);
 
     });
