@@ -1,7 +1,15 @@
-
+const taskCounter = document.getElementById("taskCounter");
 const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
+
+function updateCounter() {
+
+    const remainingTasks = document.querySelectorAll("#taskList li:not(.completed)").length;
+
+    taskCounter.textContent = `Tasks Remaining: ${remainingTasks}`;
+
+}
 
 
 function addTask() {
@@ -19,6 +27,8 @@ function addTask() {
 
     li.classList.toggle("completed");
 
+    updateCounter();
+
     });
 
     const deleteBtn = document.createElement("button");
@@ -31,6 +41,8 @@ function addTask() {
 
     li.remove();
 
+    updateCounter();
+
     });
 
     li.appendChild(deleteBtn);
@@ -38,6 +50,8 @@ function addTask() {
     taskList.appendChild(li);
 
     taskInput.value = "";
+
+    updateCounter();
 }
 
 
