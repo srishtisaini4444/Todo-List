@@ -11,6 +11,11 @@ function updateCounter() {
 
 }
 
+function saveTasks() {
+
+    localStorage.setItem("tasks", taskList.innerHTML);
+
+}
 
 function addTask() {
 
@@ -29,6 +34,8 @@ function addTask() {
 
     updateCounter();
 
+    saveTasks();
+
     });
 
     const deleteBtn = document.createElement("button");
@@ -43,6 +50,8 @@ function addTask() {
 
     updateCounter();
 
+    saveTasks();
+
     });
 
     li.appendChild(deleteBtn);
@@ -52,6 +61,8 @@ function addTask() {
     taskInput.value = "";
 
     updateCounter();
+
+    saveTasks();
 }
 
 
