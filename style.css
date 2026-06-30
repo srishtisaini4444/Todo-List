@@ -147,3 +147,8 @@ h2{
 #taskList button:hover{
     background-color: #c62828;
 }
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
