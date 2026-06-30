@@ -19,6 +19,12 @@ function addTask() {
 
     deleteBtn.textContent = "Delete";
 
+    deleteBtn.addEventListener("click", function () {
+
+    li.remove();
+
+    });
+
     li.appendChild(deleteBtn);
 
     taskList.appendChild(li);
