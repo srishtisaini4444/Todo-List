@@ -127,3 +127,23 @@ h2{
     transform: translateX(5px);
 
 }
+
+#taskList li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskList button{
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#taskList button:hover{
+    background-color: #c62828;
+}
