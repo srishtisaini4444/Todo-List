@@ -31,16 +31,15 @@ function loadTasks() {
 
 }
 
-function addTask() {
-
-    if (taskInput.value.trim() === "") {
-        alert("Please enter a task!");
-        return;
-    }
+function createTask(taskText, isCompleted = false) {
 
     const li = document.createElement("li");
 
-    li.textContent = taskInput.value;
+    li.textContent = taskText;
+
+    if (isCompleted) {
+    li.classList.add("completed");
+    }
 
     li.addEventListener("click", function () {
 
@@ -71,6 +70,17 @@ function addTask() {
     li.appendChild(deleteBtn);
 
     taskList.appendChild(li);
+
+}
+
+function addTask() {
+
+    if (taskInput.value.trim() === "") {
+        alert("Please enter a task!");
+        return;
+    }
+
+    createTask(taskInput.value);
 
     taskInput.value = "";
 
