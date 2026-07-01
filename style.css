@@ -197,3 +197,16 @@ h2{
 #clearBtn:hover{
     background-color: #f57c00;
 }
+
+#searchInput{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}

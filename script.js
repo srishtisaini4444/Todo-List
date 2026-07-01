@@ -2,6 +2,7 @@ const taskCounter = document.getElementById("taskCounter");
 const taskInput = document.getElementById("taskInput");
 const clearBtn = document.getElementById("clearBtn");
 const addBtn = document.getElementById("addBtn");
+const searchInput = document.getElementById("searchInput");
 const taskList = document.getElementById("taskList");
 
 
@@ -118,6 +119,26 @@ taskInput.addEventListener("keydown", function(event){
     if(event.key === "Enter"){
         addTask();
     }
+
+});
+
+searchInput.addEventListener("input", function () {
+
+    const searchText = searchInput.value.toLowerCase();
+
+    const tasks = taskList.querySelectorAll("li");
+
+    tasks.forEach(function (task) {
+
+        const taskText = task.firstChild.textContent.toLowerCase();
+
+        if (taskText.includes(searchText)) {
+            task.style.display = "flex";
+        } else {
+            task.style.display = "none";
+        }
+
+    });
 
 });
 
