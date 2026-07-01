@@ -17,6 +17,20 @@ function saveTasks() {
 
 }
 
+function loadTasks() {
+
+    const savedTasks = localStorage.getItem("tasks");
+
+    if (savedTasks) {
+
+        taskList.innerHTML = savedTasks;
+
+    }
+
+    updateCounter();
+
+}
+
 function addTask() {
 
     if (taskInput.value.trim() === "") {
@@ -75,3 +89,5 @@ taskInput.addEventListener("keydown", function(event){
     }
 
 });
+
+loadTasks();
