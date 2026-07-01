@@ -22,13 +22,19 @@ function saveTasks() {
 
 clearBtn.addEventListener("click", function () {
 
+    const confirmClear = confirm("Are you sure you want to delete all tasks?");
+
+    if (!confirmClear) {
+        return;
+    }
+
     taskList.innerHTML = "";
 
     updateCounter();
 
     saveTasks();
 
-    });
+});
 
 function loadTasks() {
 
