@@ -132,25 +132,44 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background-color: #f8f9fa;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+#taskList li:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 #taskList button{
     background-color: #e53935;
     color: white;
+
     border: none;
-    padding: 8px 12px;
+    padding: 8px 14px;
+
     border-radius: 6px;
+
     cursor: pointer;
-    transition: 0.3s;
+
+    transition: all 0.3s ease;
 }
 
 #taskList button:hover{
     background-color: #c62828;
+    transform: scale(1.05);
 }
 
 .completed{
     text-decoration: line-through;
     opacity: 0.6;
+    background-color: #d4edda !important;
 }
 
 #taskCounter{
