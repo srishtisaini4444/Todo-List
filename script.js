@@ -1,7 +1,10 @@
 const taskCounter = document.getElementById("taskCounter");
 const taskInput = document.getElementById("taskInput");
+const clearBtn = document.getElementById("clearBtn");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
+
+
 
 function updateCounter() {
 
@@ -16,6 +19,16 @@ function saveTasks() {
     localStorage.setItem("tasks", taskList.innerHTML);
 
 }
+
+clearBtn.addEventListener("click", function () {
+
+    taskList.innerHTML = "";
+
+    updateCounter();
+
+    saveTasks();
+
+    });
 
 function loadTasks() {
 
@@ -79,6 +92,8 @@ function addTask() {
         alert("Please enter a task!");
         return;
     }
+
+    
 
     createTask(taskInput.value);
 

@@ -158,3 +158,23 @@ h2{
     color: #666;
     font-weight: bold;
 }
+
+#clearBtn{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    background-color: #ff9800;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#clearBtn:hover{
+    background-color: #f57c00;
+}
